@@ -23,7 +23,7 @@ extern "C" {
 #error __STDC_NO_THREADS__ defined but <threads.h> included. Something is wrong about your setup.
 #endif
 
-#if __STDC_VERSION__ >= 201112L
+#if __STDC_VERSION__ >= 201112L && __STDC_VERSION__ < 202311L
 /* The rest of <threads.h> can work with a pre-C11 compiler just fine. */
 #define thread_local _Thread_local
 #endif
